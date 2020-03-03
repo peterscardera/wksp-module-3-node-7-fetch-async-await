@@ -1,21 +1,21 @@
 # 3.7.2 - fetch()
 
 ---
+//FRONT END IS FETCH*** TO GET STUFF FROM SOMEWHERE OR POST
 
 - `fetch()` is a JavaScript (but not in NodeJS) Promise-based function.
 - It's mainly used to
     - `GET` from somewhere
     - `POST` data somewhere
 
-The syntax is very similar to Promises.
+The syntax is very similar to Promises.***
 
 ---
-
+//we use fetch to go to the server so the sever can use await and a promise to get data from an api or database 
 ### `GET`
 
-```js
-fetch('<URL>')
-    .then(res => {
+```js //end point
+    .then(res => { // the data the server sends back
         // if response is successful
             // do something.
         // else
@@ -29,9 +29,9 @@ fetch('<URL>')
 ---
 
 ### `POST
-
+THIS IS HOW WE SEND IT BACK TO THE SERVER!!!!!!
 ```js
-fetch('<URL>'{
+fetch('<URL>',{
         method: 'POST', // (optional) for `GET`
         mode: '',       // (optional) no-cors, *cors, same-origin
         cache: '',      // (optional) no-cache, reload, force-cache, only-if-cached

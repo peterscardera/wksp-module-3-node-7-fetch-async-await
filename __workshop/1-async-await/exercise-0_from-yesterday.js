@@ -2,7 +2,7 @@
 // ------------
 // Write a function testNum that takes a number as an argument and returns
 // a Promise that tests if the value is less than or greater than the value 10.
-
+/*
 const compareToTen = (num) => {
     myPromise = new Promise((resolve, reject) => {
         if(num > 10) {
@@ -14,20 +14,33 @@ const compareToTen = (num) => {
     return myPromise;
 }
 
+
 const myFunc = async (num) => {
-    // add code here
+    try {
+
+    await compareToTen(num).then(answer => {
+        console.log(answer)
+    })
+    
+
+    } catch(err) {
+        console.log(err)
+    }
+   
 }
 
-myFunc(15);
-myFunc(8);
+//myFunc(15);
+//myFunc(8);
 
-    
+    */
 // Exercise 0.1
 // ------------
 // Write two functions that use Promises that you can chain!
 // The first function, makeAllCaps(), will take in an array of words and capitalize them,
 // and then the second function, sortWords(), will sort the words in alphabetical order.
 // If the array contains anything but strings, it should throw an error.
+
+
 
 const makeAllCaps = (array) => {
     return new Promise((resolve, reject) => {
@@ -52,8 +65,24 @@ const sortWords = (array) => {
 } 
 
 const textTransform = async (array) => {
-    // add code here
+
+
+    try {
+
+        let capHolder =  await makeAllCaps(array) //capHolder holds the array of capitalized words
+         
+       let sort = await sortWords(capHolder) 
+
+        console.log(sort)
+         
+ 
+ 
+     } catch(err) {
+         console.log(err)
+     }
+
 }
 
-textTransform(['cucumber', 'tomatos', 'avocado']);
-textTransform(['cucumber', 44, true]);
+ textTransform(['cucumber', 'tomatos', 'avocado']);
+//textTransform(['cucumber', 44, true]);
+

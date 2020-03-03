@@ -6,12 +6,19 @@
 const pauseFunction = () => {
     return new Promise(function(resolve, reject) {
         console.log('entering the promise(d) land');
-        resolve('resolve');
+        resolve('resolve'); // resolve is what sends the answer back to the promise
         console.log('...in limbo...');
-        reject('reject');
+        reject('reject'); //this one is never being hit/ "returned"
         console.log('shuffling off...');
     });
 }
+
+
+//to console log / use it :
+
+pauseFunction().then(data=> {
+    console.log(data)
+})
 ```
 
 ---

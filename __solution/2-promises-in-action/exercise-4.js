@@ -8,9 +8,9 @@ const getTronaldDump = async () => {
                 'Accept': 'application/json'
             }
         }
-        const quoteObj = await request(options);
+        let  quoteObj = await request(options);
         const parsedQuote = JSON.parse(quoteObj)
-        return parsedQuote.value;
+        return parsedQuote;
     } catch (err) { console.log(err) }
 }
 
